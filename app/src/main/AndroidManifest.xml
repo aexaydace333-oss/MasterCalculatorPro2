@@ -3,16 +3,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <!-- Internet access for future online/AI features -->
+    <!-- Internet permission for future AI/text solving and updates -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- PDF export / file sharing -->
+    <!-- PDF export and file handling -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!-- Notifications -->
+    <!-- Android 13+ notifications -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- Calculator vibration feedback -->
+    <!-- Calculator button vibration feedback -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
 
@@ -24,10 +24,10 @@
 
         android:supportsRtl="true"
 
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:theme="@style/Theme.MasterCalculatorPro">
 
 
-        <!-- Main launcher activity -->
+        <!-- Main App Screen -->
 
         <activity
 
@@ -38,14 +38,68 @@
 
             <intent-filter>
 
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
 
 
         </activity>
+
+
+        <!-- Scientific Calculator Module -->
+
+        <activity
+
+            android:name=".ScientificCalculatorActivity"
+
+            android:exported="false" />
+
+
+        <!-- Geometry Calculator -->
+
+        <activity
+
+            android:name=".GeometryActivity"
+
+            android:exported="false" />
+
+
+        <!-- Statistics Module -->
+
+        <activity
+
+            android:name=".StatisticsActivity"
+
+            android:exported="false" />
+
+
+        <!-- Financial Calculator -->
+
+        <activity
+
+            android:name=".FinancialCalculatorActivity"
+
+            android:exported="false" />
+
+
+        <!-- Games Section -->
+
+        <activity
+
+            android:name=".GamesActivity"
+
+            android:exported="false" />
+
+
+        <!-- AI/Text Question Solver -->
+
+        <activity
+
+            android:name=".QuestionSolverActivity"
+
+            android:exported="false" />
 
 
     </application>
